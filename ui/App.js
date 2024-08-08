@@ -167,7 +167,7 @@ const handleEventClick = (eventId) => {
           <div  onClick={() => people.checkInTime ? handleCheckOut(people) : handleCheckIn(people)} className="w-full mb-4 mr-4 bg-blue-500 text-white font-semibold py-1 px-3 border border-blue-700 rounded hover:bg-blue-600 transition duration-300" key={people._id}>
             <h2>{people.firstName} {people.lastName}</h2>
             <h2>Company: {people.companyName ? people.companyName : "Not informed"} - Position: {people.title ? people.title : "Not informed"}</h2>
-            <h2>Checked In: {people.checkInTime ? 'Yes' : 'No'} - Check In Date: {people.checkInTime ? people.checkInTime.toLocaleString() : 'Not yet'}</h2>
+            <h2>Checked In: {people.checkInTime ? 'Yes' : 'No'} - Check In Date: {people.checkInTime ? people.checkInTime.toLocaleString() : 'N/A'}</h2>
           </div>
         ))}
       </ul>
