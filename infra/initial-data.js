@@ -6280,10 +6280,11 @@ export const loadInitialData = async () => {
   for await (const community of COMMUNITIES_DATA) {
     await Communities.insertAsync(community);
   }
-
-  const communities = await Communities.find().fetchAsync();
-
+  
+  //const communities = await Communities.find().fetchAsync();
+ 
   let idx = 0;
+  
   for await (const person of PEOPLE_DATA) {
     await People.insertAsync({
       ...person,
